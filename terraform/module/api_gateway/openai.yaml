@@ -1,0 +1,19 @@
+swagger: '2.0'
+info:
+  title: portfolio-api
+  description: API Gateway para el backend del proyecto de portafolio
+  version: 1.0.0
+schemes:
+  - https
+produces:
+  - application/json
+paths:
+  /health:
+    get:
+      summary: Health check endpoint
+      operationId: healthCheck
+      x-google-backend:
+        address: https://httpbin.org/get
+      responses:
+        '200':
+          description: OK

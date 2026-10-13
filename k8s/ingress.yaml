@@ -4,7 +4,8 @@ metadata:
   name: portfolio-ingress
   namespace: portfolio-app
   annotations:
-    kubernets.io/ingress.class: "gce"
+    kubernetes.io/ingress.class: "gce"
+    kubernetes.io/ingress.global-static-ip-name: "load-balancer-jairo-uno-pip"
 spec:
   rules:
   - http:
@@ -15,4 +16,4 @@ spec:
           service:
             name: portfolio-service
             port:
-              number: 80
+              number: 8080

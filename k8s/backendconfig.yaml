@@ -1,7 +1,7 @@
 apiVersion: cloud.google.com/v1
 kind: BackendConfig
 metadata: 
-  name: portafolio-backendconfig
+  name: portfolio-backendconfig
   namespace: portfolio-app
 spec:
   securityPolicy:
@@ -9,8 +9,8 @@ spec:
   healthCheck:
     checkIntervalSec: 15
     timeoutSec: 5
-    healhtyThreshold: 2
-    unhealhtyThreshold: 2
+    healthyThreshold: 2
+    unhealthyThreshold: 2
     type: HTTP
     requestPath: /health
     port: 8080
